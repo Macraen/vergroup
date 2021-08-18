@@ -621,12 +621,13 @@
                 <div class="col-6 col-md-5"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/image-25-510x593.jpg" alt="" width="510" height="593">
                 </div>
                 <div class="col-md-6">
-                    <h1>I’m Ralph Peterson, a twenty-six-year-old UI/UX designer from Los Angeles, CA</h1>
-                    <h5>
-                        Currently I am co-leading a design<br class="d-none d-xs-block">
-                        team at Intense web design studio.
+                    <h1>{{ $poster['main_text'] }}</h1>
+                    <h5> {{ $poster['small_text'] }}
+{{--                        Currently I am co-leading a design<br class="d-none d-xs-block">--}}
+{{--                        team at Intense web design studio.--}}
+
                     </h5>
-                    <div class="offset-lg"><a class="btn btn-lg btn-secondary" href="contact-me.html">Contact Me</a></div>
+                    <div class="offset-lg"><a class="btn btn-lg btn-secondary" href="contact-me.html">{{ $poster['button_text'] }}</a></div>
                 </div>
             </div>
         </div>

@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\MainController::class, 'index']);
 
 Auth::routes();
 
@@ -24,4 +22,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('homeAdmin');
     Route::resource('user', \App\Http\Controllers\Admin\UserController::class);
+    Route::prefix('poster')->group(static function () {
+        Route::get('/', [App\Http\Controllers\admin\PosterController::class, 'index'])->name('main.poster');
+        Route::post('/save', [App\Http\Controllers\admin\PosterController::class, 'save'])->name('main.poster.save');
+    });
 });
