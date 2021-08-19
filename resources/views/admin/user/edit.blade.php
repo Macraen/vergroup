@@ -46,9 +46,9 @@
                                     <label>Тип аккаунта</label>
                                     <label for="InputRole"></label>
                                     <select class="form-control" id="InputRole" name="InputRole">
-                                        <option value="1">Пользователь</option>
-                                        <option value="3">Модератор</option>
-                                        <option value="2">Администратор</option>
+                                        @foreach($roles as $role)
+                                            <option @if(str_replace(array( '["', '"]' ), '', $user->getRoleNames()) == $role['name']) selected @endif value="{{ $role['id'] }}">{{ $role['name'] }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
