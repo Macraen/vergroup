@@ -26,4 +26,8 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
         Route::get('/', [App\Http\Controllers\admin\PosterController::class, 'index'])->name('main.poster');
         Route::post('/save', [App\Http\Controllers\admin\PosterController::class, 'save'])->name('main.poster.save');
     });
+    Route::prefix('skills')->group(static function () {
+        Route::get('/', [App\Http\Controllers\admin\SkillsController::class, 'index'])->name('main.skills');
+        Route::post('/save', [App\Http\Controllers\admin\SkillsController::class, 'save'])->name('main.skills.save');
+    });
 });

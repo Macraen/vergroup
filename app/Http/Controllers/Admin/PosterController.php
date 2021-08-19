@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Main_page;
 use Illuminate\Http\Request;
-use App\Models\Poster;
 
 class PosterController extends Controller
 {

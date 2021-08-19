@@ -255,8 +255,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('user.create') }}" class="nav-link">
-                                    <p>Умения и клиенты</p>
+                                <a href="{{ route('main.skills') }}" class="nav-link">
+                                    <p>Навыки и клиенты</p>
                                 </a>
                             </li>
                         </ul>
