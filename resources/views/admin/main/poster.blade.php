@@ -41,27 +41,22 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Главный текст</label>
-                                <textarea type="text" class="form-control" name="main_text" id="exampleInputEmail1" placeholder="Введите главный текст"></textarea>
+                                <textarea type="text" class="form-control editor" name="main_text" id="exampleInputEmail1" placeholder="">{{ $json['main_text'] }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Подпись</label>
-                                <textarea type="text" class="form-control" name="small_text" id="exampleInputPassword1" placeholder="Введите подпись"></textarea>
+                                <textarea type="text" class="form-control" name="small_text" id="exampleInputPassword1" placeholder="">{{ $json['small_text'] }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Кнопка</label>
-                                <input type="text" class="form-control" name="button_text" id="exampleInputPassword1" placeholder="Введите надпись на кнопке">
+                                <input type="text" class="form-control" name="button_text" id="exampleInputPassword1" value="{{ $json['button_text'] }}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Фото</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">Найти фото</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                </div>
+                                <img src="{{ $json['image'] }}" alt="" class="img-uploaded" style="display: block; width: 200px">
+                                <br>
+                                <input type="text" id="feature_image" value="{{ $json['image'] }}" class="form-control" name="feature_image" readonly value="">
+                                <a href="" class="popup_selector" data-inputid="feature_image">Выберите фото</a>
                             </div>
                         </div>
                         <!-- /.card-body -->

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostersTable extends Migration
+class CreateMainPagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreatePostersTable extends Migration
      */
     public function up()
     {
-        Schema::create('posters', function (Blueprint $table) {
+        Schema::create('main_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('main_text');
-            $table->string('small_text');
-            $table->char('image');
-            $table->string('button_text');
+            $table->json('value');
+            $table->string('key');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreatePostersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posters');
+        Schema::dropIfExists('main_pages');
     }
 }

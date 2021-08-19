@@ -618,7 +618,8 @@
     <section class="section section-lg bg-transparent novi-background" data-preset='{"title":"About me","category":"content box","reload":false,"id":"about-me-4"}'>
         <div class="container" data-animate='{"class":"fadeInRight"}'>
             <div class="row row-40 flex-md-row-reverse justify-content-md-between">
-                <div class="col-6 col-md-5"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/image-25-510x593.jpg" alt="" width="510" height="593">
+                <div class="col-6 col-md-5">
+                    <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $poster['image'] }}" alt="" width="510" height="593">
                 </div>
                 <div class="col-md-6">
                     <h1>{{ $poster['main_text'] }}</h1>

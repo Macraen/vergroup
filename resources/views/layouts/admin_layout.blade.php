@@ -22,9 +22,11 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="//admin/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
+    <link href="/admin/dist/css/colorbox.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/rgyh7cndra47u4dd7s3kmtyp3xt6i974lcs8us651kjyf2xc/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -254,7 +256,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('user.create') }}" class="nav-link">
-                                    <p>Мои проэкты</p>
+                                    <p>Умения и клиенты</p>
                                 </a>
                             </li>
                         </ul>
@@ -322,5 +324,7 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/admin/dist/js/pages/dashboard.js"></script>
 <script src="/admin/admin.js"></script>
+<script type="text/javascript" src="/admin/dist/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/packages/barryvdh/elfinder/js/standalonepopup.js"></script>
 </body>
 </html>
