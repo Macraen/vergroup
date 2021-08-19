@@ -711,10 +711,14 @@
                     <h5>Skills</h5>
                 </div>
                 <div class="col-md-9 col-xl-6">
-                    <h2>UI/UX design, Application design, UX research, Visual communication, Prototyping, Wireframing, HTML/CSS/JavaScript</h2>
+                    <h2>{{ $skills['skills'] }}</h2>
                 </div>
                 <div class="col-md-9 offset-md-3 col-xl-4 offset-xl-0">
-                    <div class="group-40 d-flex flex-wrap justify-content-xxl-between ps-xl-3"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/logos/logo-07-64x64.png" alt="" width="64" height="64"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/logos/logo-08-64x64.png" alt="" width="64" height="64"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/logos/logo-09-64x64.png" alt="" width="64" height="64"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/logos/logo-10-64x64.png" alt="" width="64" height="64">
+                    <div class="group-40 d-flex flex-wrap justify-content-xxl-between ps-xl-3">
+                        <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $skills['ico1'] }}" alt="" width="64" height="64">
+                        <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $skills['ico2'] }}" alt="" width="64" height="64">
+                        <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $skills['ico3'] }}" alt="" width="64" height="64">
+                        <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $skills['ico4'] }}" alt="" width="64" height="64">
                     </div>
                 </div>
             </div>
@@ -734,7 +738,7 @@
                     <h5>Clients</h5>
                 </div>
                 <div class="col-md-9 col-xl-6">
-                    <h2>Artworx, Mito, Maironti, Bikerist, Fibrolo, Decoroto, Drankso.</h2>
+                    <h2>{{ $skills['clients'] }}</h2>
                 </div>
             </div>
         </div>
