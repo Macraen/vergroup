@@ -622,8 +622,8 @@
                     <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $poster['image'] }}" alt="" width="510" height="593">
                 </div>
                 <div class="col-md-6">
-                    <h1>{{ $poster['main_text'] }}</h1>
-                    <h5> {{ $poster['small_text'] }}
+                    <h1>@php echo $poster['main_text'] @endphp</h1>
+                    <h5>@php echo $poster['small_text'] @endphp
 {{--                        Currently I am co-leading a design<br class="d-none d-xs-block">--}}
 {{--                        team at Intense web design studio.--}}
 
@@ -711,7 +711,7 @@
                     <h5>Skills</h5>
                 </div>
                 <div class="col-md-9 col-xl-6">
-                    <h2>{{ $skills['skills'] }}</h2>
+                    <h2>@php echo $skills['skills'] @endphp</h2>
                 </div>
                 <div class="col-md-9 offset-md-3 col-xl-4 offset-xl-0">
                     <div class="group-40 d-flex flex-wrap justify-content-xxl-between ps-xl-3">
@@ -738,7 +738,7 @@
                     <h5>Clients</h5>
                 </div>
                 <div class="col-md-9 col-xl-6">
-                    <h2>{{ $skills['clients'] }}</h2>
+                    <h2>@php echo $skills['clients'] @endphp</h2>
                 </div>
             </div>
         </div>
@@ -758,51 +758,16 @@
                 </div>
                 <div class="col-md-9 col-xl-10">
                     <div class="row row-20 gutters-20 row-text">
+                        @while($int++ < $count)
                         <div class="col-6 col-lg-4 col-xl-3">
                             <article class="award award-secondary">
-                                <div class="award-title h3">2019</div>
+                                <div class="award-title h3">@php echo $experience['year_experience'.$int] @endphp</div>
                                 <div class="award-text small">
-                                    Intense,<br class="d-none d-xs-block">
-                                    Leading UI/UX designer
+                                    @php echo $experience['experience_text'.$int] @endphp
                                 </div>
                             </article>
                         </div>
-                        <div class="col-6 col-lg-4 col-xl-3">
-                            <article class="award">
-                                <div class="award-title h3">2018</div>
-                                <div class="award-text small">
-                                    ZGP Web Agency,<br class="d-none d-xs-block">
-                                    Product Designer
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-6 col-lg-4 col-xl-3">
-                            <article class="award">
-                                <div class="award-title h3">2017</div>
-                                <div class="award-text small">
-                                    Pixx Creative Studio,<br class="d-none d-xs-block">
-                                    Leading UX designer
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-6 col-lg-4 col-xl-3">
-                            <article class="award">
-                                <div class="award-title h3">2014</div>
-                                <div class="award-text small">
-                                    Xtra Web,<br class="d-none d-xs-block">
-                                    UX Designer
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-6 col-lg-4 col-xl-3">
-                            <article class="award">
-                                <div class="award-title h3">2012</div>
-                                <div class="award-text small">
-                                    LA Web Studio,<br class="d-none d-xs-block">
-                                    Junior Designer
-                                </div>
-                            </article>
-                        </div>
+                        @endwhile
                     </div>
                 </div>
             </div>

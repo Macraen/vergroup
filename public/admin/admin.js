@@ -9,12 +9,106 @@ $(document).ready(function () {
         }
     });
 
+    let experience1 = document.getElementById("year_experience1").value;
+    if (experience1 != "") {
+        document.getElementById("div2").style.display = 'block';
+    } else {
+        document.getElementById("div2").style.display = 'none';
+    }
+    let experience2 = document.getElementById("year_experience2").value;
+    if (experience2 != "") {
+        document.getElementById("div3").style.display = 'block';
+    } else {
+        document.getElementById("div3").style.display = 'none';
+    }
+    let experience3 = document.getElementById("year_experience3").value;
+    if (experience3 != "") {
+        document.getElementById("div4").style.display = 'block';
+    } else {
+        document.getElementById("div4").style.display = 'none';
+    }
+    let experience4 = document.getElementById("year_experience4").value;
+    if (experience4 != "") {
+        document.getElementById("div5").style.display = 'block';
+    } else {
+        document.getElementById("div5").style.display = 'none';
+    }
+    let experience5 = document.getElementById("year_experience5").value;
+    if (experience5 != "") {
+        document.getElementById("div6").style.display = 'block';
+    } else {
+        document.getElementById("div6").style.display = 'none';
+    }
+    let experience6 = document.getElementById("year_experience6").value;
+    if (experience6 != "") {
+        document.getElementById("div7").style.display = 'block';
+    } else {
+        document.getElementById("div7").style.display = 'none';
+    }
+    let experience7 = document.getElementById("year_experience7").value;
+    if (experience7 != "") {
+        document.getElementById("div8").style.display = 'block';
+    } else {
+        document.getElementById("div8").style.display = 'none';
+    }
+
+    document.querySelector("#year_experience1").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div2").style.display = 'block';
+        } else {
+            document.getElementById("div2").style.display = 'none';
+        }
+    }
+    document.querySelector("#year_experience2").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div3").style.display = 'block';
+        } else {
+            document.getElementById("div3").style.display = 'none';
+        }
+    }
+    document.querySelector("#year_experience3").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div4").style.display = 'block';
+        } else {
+            document.getElementById("div4").style.display = 'none';
+        }
+    }
+    document.querySelector("#year_experience4").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div5").style.display = 'block';
+        } else {
+            document.getElementById("div5").style.display = 'none';
+        }
+    }
+    document.querySelector("#year_experience5").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div6").style.display = 'block';
+        } else {
+            document.getElementById("div6").style.display = 'none';
+        }
+    }
+    document.querySelector("#year_experience6").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div7").style.display = 'block';
+        } else {
+            document.getElementById("div7").style.display = 'none';
+        }
+    }
+    document.querySelector("#year_experience7").oninput = function(){
+        if (this.value.length == 4){
+            document.getElementById("div8").style.display = 'block';
+        } else {
+            document.getElementById("div8").style.display = 'none';
+        }
+    }
+
     $('.delete-btn').click(function () {
         var res = confirm('Подтвердите действия');
         if(!res){
             return false;
         }
     });
+
 })
 
 tinymce.init({

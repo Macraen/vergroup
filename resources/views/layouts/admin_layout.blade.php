@@ -259,6 +259,11 @@
                                     <p>Навыки и клиенты</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('main.experience') }}" class="nav-link">
+                                    <p>Опыт работы</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

@@ -30,4 +30,8 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
         Route::get('/', [App\Http\Controllers\admin\SkillsController::class, 'index'])->name('main.skills');
         Route::post('/save', [App\Http\Controllers\admin\SkillsController::class, 'save'])->name('main.skills.save');
     });
+    Route::prefix('experience')->group(static function () {
+        Route::get('/', [App\Http\Controllers\admin\ExperienceController::class, 'index'])->name('main.experience');
+        Route::post('/save', [App\Http\Controllers\admin\ExperienceController::class, 'save'])->name('main.experience.save');
+    });
 });
