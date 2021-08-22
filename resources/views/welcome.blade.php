@@ -646,54 +646,23 @@
                 <div class="col-md-3 col-xl-2">
                     <h5>My projects</h5>
                 </div>
-                <div class="col-md-9 col-xl-6">
-                    <h2>I have designed dozens of appealing interfaces for websites and web apps. Take a look at my projects below.</h2>
-                </div>
-                <div class="col-md-9 offset-md-3 col-xl-4 offset-xl-0 text-xl-end">
-                    <div class="group-30 d-xl-inline-flex flex-xl-column"><a class="btn btn-lg btn-info" href="#"><span class="btn-icon int-behance novi-icon"></span><span>Behance</span></a><a class="btn btn-lg btn-danger" href="#"><span class="btn-icon int-dribble novi-icon"></span><span>Dribbble</span></a></div>
+                <div class="col-md-9 col-xl-10">
+                    <h2>@php echo $projects['main_text'] @endphp</h2>
                 </div>
             </div>
             <div class="row row-offset-xl row-30 row-md-40">
+                @while(++$intProj < $cProj)
                 <div class="col-xs-10 col-md-6" data-animate='{"class":"fadeInUp"}'>
                     <!-- Thumbnail louis-->
-                    <figure class="thumbnail thumbnail-louis novi-background"><img class="lazy-img thumbnail-louis-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/partners/partner-1-inverse-180x49.png" alt="" width="180" height="49">
+                    <figure class="thumbnail thumbnail-louis novi-background"><img class="lazy-img thumbnail-louis-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $projects['logo'.$intProj] }}" alt="" width="180" height="49">
                         <figcaption class="thumbnail-louis-caption novi-background">
                             <div class="group-20 d-flex justify-content-between">
-                                <div class="thumbnail-louis-title">Website interface design</div><a class="link" href="portfolio-wide-vertical.html">Learn more<span class="link-icon int-arrow-right novi-icon"></span></a>
+                                <div class="thumbnail-louis-title">{{ $projects['name'.$intProj] }}</div><a class="link" href="{{ $projects['link'.$intProj] }}">Learn more<span class="link-icon int-arrow-right novi-icon"></span></a>
                             </div>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-xs-10 col-md-6" data-animate='{"class":"fadeInUp"}'>
-                    <!-- Thumbnail louis-->
-                    <figure class="thumbnail thumbnail-louis novi-background"><img class="lazy-img thumbnail-louis-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/partners/partner-4-inverse-107x31.png" alt="" width="107" height="31">
-                        <figcaption class="thumbnail-louis-caption novi-background">
-                            <div class="group-20 d-flex justify-content-between">
-                                <div class="thumbnail-louis-title">UX design</div><a class="link" href="portfolio-wide-vertical.html">Learn more<span class="link-icon int-arrow-right novi-icon"></span></a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-xs-10 col-md-6" data-animate='{"class":"fadeInUp"}'>
-                    <!-- Thumbnail louis-->
-                    <figure class="thumbnail thumbnail-louis novi-background"><img class="lazy-img thumbnail-louis-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/partners/partner-3-inverse-180x45.png" alt="" width="180" height="45">
-                        <figcaption class="thumbnail-louis-caption novi-background">
-                            <div class="group-20 d-flex justify-content-between">
-                                <div class="thumbnail-louis-title">Motion design</div><a class="link" href="portfolio-wide-vertical.html">Learn more<span class="link-icon int-arrow-right novi-icon"></span></a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-xs-10 col-md-6" data-animate='{"class":"fadeInUp"}'>
-                    <!-- Thumbnail louis-->
-                    <figure class="thumbnail thumbnail-louis novi-background"><img class="lazy-img thumbnail-louis-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="images/partners/partner-2-inverse-133x38.png" alt="" width="133" height="38">
-                        <figcaption class="thumbnail-louis-caption novi-background">
-                            <div class="group-20 d-flex justify-content-between">
-                                <div class="thumbnail-louis-title">Web application UI design</div><a class="link" href="portfolio-wide-vertical.html">Learn more<span class="link-icon int-arrow-right novi-icon"></span></a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
+                @endwhile
             </div>
         </div>
     </section>
@@ -758,12 +727,12 @@
                 </div>
                 <div class="col-md-9 col-xl-10">
                     <div class="row row-20 gutters-20 row-text">
-                        @while($int++ < $count)
+                        @while($intExp++ < $cExp)
                         <div class="col-6 col-lg-4 col-xl-3">
                             <article class="award award-secondary">
-                                <div class="award-title h3">@php echo $experience['year_experience'.$int] @endphp</div>
+                                <div class="award-title h3">@php echo $experience['year_experience'.$intExp] @endphp</div>
                                 <div class="award-text small">
-                                    @php echo $experience['experience_text'.$int] @endphp
+                                    @php echo $experience['experience_text'.$intExp] @endphp
                                 </div>
                             </article>
                         </div>

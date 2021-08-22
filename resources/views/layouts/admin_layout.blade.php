@@ -219,6 +219,7 @@
                             </p>
                         </a>
                     </li>
+                    @can('user_edit')
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-table"></i>
@@ -240,6 +241,7 @@
                             </li>
                         </ul>
                     </li>
+                    @endcan
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-table"></i>
@@ -255,6 +257,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ route('main.projects') }}" class="nav-link">
+                                    <p>Проекты</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ route('main.skills') }}" class="nav-link">
                                     <p>Навыки и клиенты</p>
                                 </a>
@@ -262,6 +269,11 @@
                             <li class="nav-item">
                                 <a href="{{ route('main.experience') }}" class="nav-link">
                                     <p>Опыт работы</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('main.contact') }}" class="nav-link">
+                                    <p>Контакт</p>
                                 </a>
                             </li>
                         </ul>
