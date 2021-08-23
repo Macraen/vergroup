@@ -622,8 +622,8 @@
                     <img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" data-src="{{ $poster['image'] }}" alt="" width="510" height="593">
                 </div>
                 <div class="col-md-6">
-                    <h1>@php echo $poster['main_text'] @endphp</h1>
-                    <h5>@php echo $poster['small_text'] @endphp
+                    <h1>{!! $poster['main_text'] !!}</h1>
+                    <h5>{!! $poster['small_text'] !!}
 {{--                        Currently I am co-leading a design<br class="d-none d-xs-block">--}}
 {{--                        team at Intense web design studio.--}}
 
@@ -647,7 +647,7 @@
                     <h5>My projects</h5>
                 </div>
                 <div class="col-md-9 col-xl-10">
-                    <h2>@php echo $projects['main_text'] @endphp</h2>
+                    <h2>{!! $projects['main_text'] !!}</h2>
                 </div>
             </div>
             <div class="row row-offset-xl row-30 row-md-40">
@@ -680,7 +680,7 @@
                     <h5>Skills</h5>
                 </div>
                 <div class="col-md-9 col-xl-6">
-                    <h2>@php echo $skills['skills'] @endphp</h2>
+                    <h2>{!! $skills['skills'] !!}</h2>
                 </div>
                 <div class="col-md-9 offset-md-3 col-xl-4 offset-xl-0">
                     <div class="group-40 d-flex flex-wrap justify-content-xxl-between ps-xl-3">
@@ -707,7 +707,7 @@
                     <h5>Clients</h5>
                 </div>
                 <div class="col-md-9 col-xl-6">
-                    <h2>@php echo $skills['clients'] @endphp</h2>
+                    <h2>{!! $skills['clients'] !!}</h2>
                 </div>
             </div>
         </div>
@@ -730,9 +730,9 @@
                         @while($intExp++ < $cExp)
                         <div class="col-6 col-lg-4 col-xl-3">
                             <article class="award award-secondary">
-                                <div class="award-title h3">@php echo $experience['year_experience'.$intExp] @endphp</div>
+                                <div class="award-title h3">{!! $experience['year_experience'.$intExp] !!}</div>
                                 <div class="award-text small">
-                                    @php echo $experience['experience_text'.$intExp] @endphp
+                                    {!! $experience['experience_text'.$intExp] !!}
                                 </div>
                             </article>
                         </div>
